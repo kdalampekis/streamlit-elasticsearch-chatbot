@@ -1,49 +1,44 @@
-**RAG-Based PDF QA Chatbot using Streamlit & Elasticsearch**
+# 🤖 RAG-Based PDF QA Chatbot using Streamlit & Elasticsearch
 
-This project implements a Retrieval-Augmented Generation (RAG) chatbot for answering questions over uploaded PDF documents.\
-It is designed as a lightweight, local or cloud-deployable system that uses semantic search with Elasticsearch and open-source embeddings for document retrieval.
+This project implements a **Retrieval-Augmented Generation (RAG)** chatbot for answering questions over uploaded PDF documents.  
+It is designed as a lightweight, local or cloud-deployable system that uses **semantic search** with **Elasticsearch**, and **open-source embeddings** for document retrieval.
 
-Built with Streamlit, the application enables intuitive document upload, PDF parsing (with OCR fallback), vector indexing, and natural language interaction powered by an LLM API.
+Built with **Streamlit**, the application enables intuitive document upload, PDF parsing (with OCR fallback), vector indexing, and natural language interaction powered by an LLM API.
 
-* * * * *
+---
 
-**Key Features**
+## 🔍 Key Features
 
--   Upload one or multiple PDF files via the UI
+- 📄 Upload one or multiple PDF files via the UI
+- 🧠 Automatic text extraction, chunking, and embedding
+- 📦 Storage of semantic vectors into Elasticsearch
+- 🔎 Real-time vector search using semantic similarity
+- 🧾 OCR fallback using Tesseract for scanned or image PDFs
+- 🤖 Retrieval-Augmented Generation (RAG) architecture
+- 🧬 Hugging Face sentence embeddings: `all-MiniLM-L6-v2`
+- 🗣️ Multilingual input/output support (Greek & English)
+- 🎨 Clean chat interface with video background and token-by-token reply streaming
+- 📥 Option to download full chat history
 
--   Automatic text extraction, chunking, and embedding
+---
 
--   Storage of semantic vectors into Elasticsearch
+## ⚙️ Technology Stack
 
--   Real-time vector search using semantic similarity
+| Component | Technology |
+|----------|-------------|
+| **Frontend** | Streamlit |
+| **Embeddings** | SentenceTransformers (`all-MiniLM-L6-v2`) |
+| **Vector Store** | Elasticsearch |
+| **Text Extraction** | PDFPlumber, Tesseract (OCR fallback) |
+| **Chunking** | LangChain RecursiveCharacterTextSplitter |
+| **LLM API** | External language model (configurable endpoint) |
+| **Deployment** | Compatible with local or cloud environments |
 
--   OCR fallback using Tesseract for scanned or image PDFs
+---
 
--   Retrieval-Augmented Generation (RAG) architecture
+## 📂 Project Structure
 
--   Hugging Face sentence embeddings: all-MiniLM-L6-v2
 
--   Multilingual input/output support (Greek & English)
-
--   Clean chat interface with video background and token-by-token reply streaming
-
--   Option to download full chat history
-
-* * * * *
-
-**Technology Stack**
-
-Frontend: Streamlit\
-Embeddings: SentenceTransformers (all-MiniLM-L6-v2)\
-Vector Store: Elasticsearch\
-Text Extraction: PDFPlumber, Tesseract\
-Chunking: LangChain RecursiveCharacterTextSplitter\
-LLM API: External language model endpoint (configurable)\
-Deployment: Local or cloud-compatible (e.g., Streamlit Cloud)
-
-* * * * *
-
-**Project Structure**
 
 -   `video_background.py`: Main Streamlit app
 
@@ -53,7 +48,7 @@ Deployment: Local or cloud-compatible (e.g., Streamlit Cloud)
 
 * * * * *
 
-**Getting Started**
+## 🚀 Getting Started
 
 1.  Install dependencies: Run the last cell of the .ipynb file.
 
